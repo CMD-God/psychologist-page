@@ -33,7 +33,7 @@
 
 .navbar_name {
 	color: var(--sanddune);
-	margin-right: 5em;
+	margin-right: 3em;
 }
 
 .navbar_link {
