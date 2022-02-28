@@ -63,16 +63,30 @@ a {
 	color: white;
 }
 
+h1 {
+	padding-top: 4em;
+	padding-bottom: 2em;
+	font-family: Playfair Display;
+}
+
 #services {
 	background-color: var(--white);
 	text-align: center;
 	width: 100%;
 }
 
+#servicesCarouselContainer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
 #servicesListGroup {
 	width: 25em;
 	font-weight: bold;
 	text-align: left;
+	margin-right: 2em;
 }
 
 .list-group-item-creme {
@@ -80,9 +94,14 @@ a {
 	color: var(--sanddune);
 }
 
-.list-group-item-creme .selected {
+.list-group-item-creme.selected {
 	background-color: var(--tacao);
 	color: white;
+}
+
+#servicesCarousel {
+	height: 25em;
+	aspect-ratio: 3/2;
 }
 
 /*
