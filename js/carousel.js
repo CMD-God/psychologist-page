@@ -1,0 +1,2 @@
+
+$('#mainCarousel').carousel();
