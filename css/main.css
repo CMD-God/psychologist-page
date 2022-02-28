@@ -108,6 +108,23 @@ h1 {
 	aspect-ratio: 3/2;
 }
 
+#aboutme {
+	background-color: var(--pampas);
+	text-align: center;
+	width: 100%;
+}
+
+#aboutmeContent {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#aboutmeText {
+	width: 50%;
+}
+
 /*
 :root {
 	--indiankhaki: #C4A48F;
