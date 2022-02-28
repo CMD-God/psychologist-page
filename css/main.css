@@ -63,6 +63,28 @@ a {
 	color: white;
 }
 
+#services {
+	background-color: var(--white);
+	text-align: center;
+	width: 100%;
+}
+
+#servicesListGroup {
+	width: 25em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.list-group-item-creme {
+	background-color: var(--pampas);
+	color: var(--sanddune);
+}
+
+.list-group-item-creme .selected {
+	background-color: var(--tacao);
+	color: white;
+}
+
 /*
 :root {
 	--indiankhaki: #C4A48F;
