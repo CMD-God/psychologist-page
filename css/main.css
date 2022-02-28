@@ -63,6 +63,10 @@ a {
 	color: white;
 }
 
+* {
+	scroll-padding: 6em;
+}
+
 h1 {
 	padding-top: 4em;
 	padding-bottom: 2em;
