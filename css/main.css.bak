@@ -5,16 +5,21 @@
 	border-color: var(--apricot);
 }
 
+#navbarContainer {
+	z-index: 50;
+	margin: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
 .contact_bar {
 	background-color: var(--sanddune);
 	font-size: 0.8em;
 	padding: 0.2em 15%;
 	text-align: right;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	height: 2em;
-	width: 100%;
+	margin: 0px;
 }
 
 .navbar_space {
@@ -22,10 +27,8 @@
 }
 
 .navbar {
-	top:2em;
-	left: 0px;
 	width: 100%;
-	height: 3em;
+	margin: 0px;
 	background-color: #FFFFFF;
 	align-content: space-around;
 	justify-content: center;
@@ -33,7 +36,7 @@
 
 .navbar_name {
 	color: var(--sanddune);
-	margin-right: 3em;
+	margin-right: 5em;
 }
 
 .navbar_link {
@@ -58,6 +61,75 @@ a {
 
 .white_text {
 	color: white;
+}
+
+* {
+	scroll-padding: 6em;
+}
+
+h1 {
+	padding-top: 4em;
+	padding-bottom: 2em;
+	font-family: Playfair Display;
+}
+
+#services {
+	background-color: var(--white);
+	text-align: center;
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+#servicesCarouselContainer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#servicesListGroup {
+	width: 25em;
+	font-weight: bold;
+	text-align: left;
+	margin-right: 2em;
+}
+
+.list-group-item-creme {
+	background-color: var(--pampas);
+	color: var(--sanddune);
+}
+
+.list-group-item-creme.selected {
+	background-color: var(--tacao);
+	color: white;
+}
+
+#servicesCarousel {
+	height: 25em;
+	aspect-ratio: 3/2;
+}
+
+#aboutme {
+	background-color: var(--pampas);
+	text-align: center;
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+#aboutmeContent {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#aboutmeText {
+	width: 50%;
+	margin-right: 3em;
+}
+
+#aboutmeContent .card-title {
+	
 }
 
 /*
