@@ -64,7 +64,7 @@
 			<h1>Szolgáltatások</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum ac sem eu tincidunt aenean ultrices, libero vel vestibulum euismod, neque lacus ac ligula</p>
 
-			<div id="servicesCarouselContainer">
+			<div id="servicesCarouselContainer" class="center_flex">
 				<ul class="list-group" id="servicesListGroup">
 					<li class="list-group-item list-group-item-creme">Pszichológia</li>
 					<li class="list-group-item list-group-item-creme">Coaching és személyes fejlődés</li>
@@ -93,7 +93,7 @@
 
 		<div id="aboutme">
 			<h1>Bemutatkozom</h1>
-			<div id="aboutmeContent">
+			<div id="aboutmeContent" class="center_flex">
 				<div id="aboutmeText">Kalóz János György a nevem klinikai szakpszichógus, pszichóterapeuta és mentálhigiénés szakember. Kedvenc terápiás módszereim, a kognitív viselkedés módosítás és a sématerápia. Tanulmányaimat a kolozsvári Babes Bólyai egyetemen végeztem. A pszichológia nekem az egyik nagy hobbym, ezért én sosem járok dolgozni. Kedvenc foglalkozási területeim, a szorongásos zavarok, pánikbetegség, személyiségzavarok, depresszió és nem utolsó sorban a függőségek Pszichológushoz az jár, aki szeretne tenni önmagáért, aki a gyógyszeres kezelést megelőzve vagy akár azzal karöltve saját erőforrásait felhasználva, lelki világát feltárva szeretné rendbetenni magát. Olyan személyeken segít a pszichoterápia, akiknek nehézségeik vannak, és tenni szeretnének azok megoldása érdekében. A pszichóterápia nem oldja meg azonnal a gondokat, a feltárás az első lépés, majd következnek azok a folyamatok amelyeket neked kell meglépned, én csak jövök melletted egy darabon! Keress bátran a kolozsvári rendelőmben!</div>
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="img/about-img.png" alt="Card image cap">
@@ -102,8 +102,34 @@
 					</div>
 				</div>
 			</div>
-
-
+		</div>
+		
+		<div id="feedback">
+			<h1>Klienseim mondják</h1>
+			<div id="feedbackContent" class="center_flex">
+				<div id="feedbackComments">
+					<div id="feedbackDisplay">
+						<div class="comment">
+							<div class="commentBody">"Számomra a rendelője egy olyan hely, ahova mikor belépek azt érzem, hogy biztonságban vagyok, önmagam lehetek. Mindig nyíltan beszélhetek a problémáimról, az érzéseimről, barmiről ami éppen bennem van, és közben egy olyan ember ül velem szemben, akit érdekel a mondanóm, aki figyel rám, nem ítélkezik, és őja. Ha egy tapasztalt ember tanácsára van szükségem, akkor mindig hozzá fordulok."</div>
+							<div class="commentAuthor">Bárdos Imola</div>
+						</div>
+					</div>
+					<hr class="customDivider"></hr>
+					<div class="center_flex">
+						<div class="commentArrow center_flex"><div class="arrow left"></div></div>
+						<div class="commentArrow center_flex"><div class="arrow right"></div></div>
+					</div>
+				</div>
+				<div id="feedbackSender">
+					<p class="bold sanddune">Írja meg a véleményét</p>
+					<p class="sanddune must_fill">Név</p>
+					<input type="text" id="commentInputName"></input>
+					<p class="sanddune must_fill">E-mail cím</p>
+					<input type="text" id="commentInputEmail"></input>
+					<p class="sanddune must_fill">Üzenet</p>
+					<textarea id="commentInputBody"></textarea>
+				</div>
+			</div>
 		</div>
 			
 
