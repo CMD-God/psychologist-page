@@ -223,7 +223,16 @@ h1 {
 
 .must_fill::after {
 	content: " *";
-	color: red;
+	color: var(--apricot);
+}
+
+.must_fill_before {
+	font-size: 0.8em;
+}
+
+.must_fill_before::before {
+	content: "* ";
+	color: var(--apricot);
 }
 
 #feedbackSender {
@@ -273,6 +282,49 @@ input, textarea {
 .pTopMargin {
 	margin-top: 1rem;
 	margin-bottom: 0;
+}
+
+.inline_block {
+	display: inline-block;
+}
+
+.text_flex {
+	display:flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+#contactLocations .bi {
+	font-size: 1.2em;
+	color: var(--indiankhaki);
+}
+
+.navIcon {
+	margin-left: 1em;
+	font-size: 1em;
+	color: white;
+}
+
+.btn-white {
+	color: white;
+	background-color: white;
+	border-color: white;
+}
+
+.facebook_blue {
+	color: #3B5998;
+}
+
+.google_red {
+	color: #DE5246;
+}
+
+.instagram_pink {
+	color: #D22F71;
+}
+
+.full_width {
+	width: 100%;
 }
 
 /*
