@@ -108,6 +108,7 @@
 			<h1>Klienseim mondják</h1>
 			<div id="feedbackContent" class="center_flex">
 				<div id="feedbackComments">
+					<object type="image/svg+xml" data="img/quotes_arrows.svg" class="feedbackQuotes"></object>
 					<div id="feedbackDisplay">
 						<div class="comment">
 							<div class="commentBody">"Számomra a rendelője egy olyan hely, ahova mikor belépek azt érzem, hogy biztonságban vagyok, önmagam lehetek. Mindig nyíltan beszélhetek a problémáimról, az érzéseimről, barmiről ami éppen bennem van, és közben egy olyan ember ül velem szemben, akit érdekel a mondanóm, aki figyel rám, nem ítélkezik, és őja. Ha egy tapasztalt ember tanácsára van szükségem, akkor mindig hozzá fordulok."</div>
@@ -122,17 +123,39 @@
 				</div>
 				<div id="feedbackSender">
 					<p class="bold sanddune">Írja meg a véleményét</p>
-					<p class="sanddune must_fill">Név</p>
+					<p class="sanddune must_fill pTopMargin">Név</p>
 					<input type="text" id="commentInputName"></input>
-					<p class="sanddune must_fill">E-mail cím</p>
+					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
 					<input type="text" id="commentInputEmail"></input>
-					<p class="sanddune must_fill">Üzenet</p>
-					<input type="text" id="commentInputBody"></input>
+					<p class="sanddune must_fill pTopMargin">Üzenet</p>
+					<textarea id="commentInputBody"></textarea>
+				</div>
+			</div>
+		</div>
+		
+		<div id="contacts">
+			<h1 class="white">Kapcsolat</h1>
+			<div id="contactsContent" class="center_flex">
+				<div id="contactsSend">
+					<p class="bold sanddune center">Időpont foglalás</p>
+					<p class="sanddune must_fill pTopMargin">Név</p>
+					<input type="text" id="contactInputName"></input>
+					<p class="sanddune must_fill pTopMargin">Telefonszám</p>
+					<input type="text" id="contactInputPhoneNumber"></input>
+					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
+					<input type="text" id="contactInputEmail"></input>
+					<p class="sanddune must_fill pTopMargin">Nap</p>
+					<select id="contactInputday"></select>
+					<p class="sanddune must_fill pTopMargin">Óra</p>
+					<select id="contactInputHour"></select>
+				</div>
+				<div id="contactLocations">
+					<p class="bold sanddune center"></p>
 				</div>
 			</div>
 		</div>
 			
-
+		<!--
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 			Launch test modal
 		</button>
@@ -154,9 +177,7 @@
 				</div>
 			</div>
 		</div>
-
-		<div style="height: 1000px"></div>
-
+		-->
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/carousel.js"></script>

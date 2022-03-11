@@ -149,14 +149,20 @@ h1 {
 
 #feedbackComments {
 	background-color: var(--pampas);
-	width: 35%;
-	min-width: 20em;
+	width: 25em;
 	margin-right: 3em;
+	position: relative; /*Just to make some of the absolute elements within be anchored to this*/
 	/*aspect-ratio: 555/566;*/
 }
 
+.feedbackQuotes {
+	position: absolute;
+	top: -1em;
+	left: 2em;
+}
+
 #feedbackDisplay {
-	padding-top: 5em;
+	padding-top: 3em;
 	width: 100%;
 	overflow: hidden;
 }
@@ -165,14 +171,15 @@ h1 {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	padding: 1em;
+	padding: 2em;
 }
 
 .commentBody {
-	text-align: center;
+	text-align: initial;
 }
 
 .commentAuthor {
+	padding-top: 0.5em;
 	text-align: right;
 }
 
@@ -226,6 +233,46 @@ h1 {
 
 input, textarea {
 	width: 100%;
+}
+
+#contacts {
+	background-color: black;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+#contactsContent {
+	height: 40em;
+}
+
+#contactsSend {
+	text-align: initial;
+	background-color: white;
+	width: 20em;
+	padding: 2em;
+	height: 100%;
+}
+
+#contactLocations {
+	text-align: initial;
+	background-color: var(--pampas);
+	width: 20em;
+	padding: 2em;
+	height: 100%;
+}
+
+.white {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.pTopMargin {
+	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 /*
