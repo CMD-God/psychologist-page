@@ -1,4 +1,2 @@
 
 $('#mainCarousel').carousel();
-
-$('#servicesCarousel').carousel();

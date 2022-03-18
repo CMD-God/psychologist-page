@@ -109,8 +109,6 @@ h1 {
 	font-weight: bold;
 	text-align: left;
 	margin-right: 2em;
-	cursor: pointer;
-	user-select: none;
 }
 
 .list-group-item-creme {
