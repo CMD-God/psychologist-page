@@ -21,6 +21,8 @@ var servicesCarousel = $('#servicesCarousel').carousel({ // The return value is 
 const textElement = document.getElementById("servicesText");
 const ghostElement = document.getElementById("servicesGhostText");
 
+// TODO: Rework this entire system, because I misunderstood what I was supposed to do!
+
 function returnServiceButtonFunction(i) {
 	const id = i;
 	return function() {
@@ -29,6 +31,9 @@ function returnServiceButtonFunction(i) {
 		servicesCarousel.carousel(id);
 		$(textElement).css("opacity", "0").stop().animate({opacity: "1"});
 		$(ghostElement).css("opacity", "1").stop().animate({opacity: "0"});
+		
+		$("#servicesListGroup .list-group-item").removeClass("selected");
+		$(this).addClass("selected");
 	}
 }
 

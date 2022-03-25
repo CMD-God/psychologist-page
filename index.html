@@ -141,11 +141,11 @@
 				<div id="feedbackSender">
 					<p class="bold sanddune">Írja meg a véleményét</p>
 					<p class="sanddune must_fill pTopMargin">Név</p>
-					<input type="text" id="commentInputName"></input>
+					<input type="text" id="commentInputName" required></input>
 					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
-					<input type="text" id="commentInputEmail"></input>
+					<input type="email" id="commentInputEmail" required></input>
 					<p class="sanddune must_fill pTopMargin">Üzenet</p>
-					<textarea id="commentInputBody"></textarea>
+					<textarea id="commentInputBody" required></textarea>
 					<br>
 					<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
 					<button class="btn btn-primary">Üzenet küldése</button>
@@ -159,15 +159,15 @@
 				<div id="contactsSend">
 					<p class="bold sanddune center">Időpont foglalás</p>
 					<p class="sanddune must_fill pTopMargin">Név</p>
-					<input type="text" id="contactInputName"></input>
+					<input type="text" id="contactInputName" required></input>
 					<p class="sanddune must_fill pTopMargin">Telefonszám</p>
-					<input type="text" id="contactInputPhoneNumber"></input>
+					<input type="tel" id="contactInputPhoneNumber" required></input>
 					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
-					<input type="text" id="contactInputEmail"></input>
+					<input type="email" id="contactInputEmail" required></input>
 					<p class="sanddune must_fill pTopMargin">Nap</p>
-					<select id="contactInputday"></select>
+					<select id="contactInputDay" required></select>
 					<p class="sanddune must_fill pTopMargin">Óra</p>
-					<select id="contactInputHour"></select>
+					<select id="contactInputHour" required></select>
 					<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
 					<button class="btn btn-primary">Ütemezze be magát</button>
 				</div>
@@ -220,5 +220,6 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/carousel.js"></script>
 		<script src="js/services.js"></script>
+		<script src="js/contacts.js"></script>
 	</body>
 </html>
