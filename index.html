@@ -139,16 +139,18 @@
 					</div>
 				</div>
 				<div id="feedbackSender">
-					<p class="bold sanddune">Írja meg a véleményét</p>
-					<p class="sanddune must_fill pTopMargin">Név</p>
-					<input type="text" id="commentInputName" required></input>
-					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
-					<input type="email" id="commentInputEmail" required></input>
-					<p class="sanddune must_fill pTopMargin">Üzenet</p>
-					<textarea id="commentInputBody" required></textarea>
-					<br>
-					<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
-					<button class="btn btn-primary">Üzenet küldése</button>
+					<form onsubmit="sendFormData(event, 'php/sendComment.php');">
+						<p class="bold sanddune">Írja meg a véleményét</p>
+						<p class="sanddune must_fill pTopMargin">Név</p>
+						<input type="text" id="commentInputName" name="name" required></input>
+						<p class="sanddune must_fill pTopMargin">E-mail cím</p>
+						<input type="email" id="commentInputEmail" name="email" required></input>
+						<p class="sanddune must_fill pTopMargin">Üzenet</p>
+						<textarea id="commentInputBody" name="comment" required></textarea>
+						<br>
+						<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
+						<input class="btn btn-primary" type="submit" value="Üzenet küldése">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -157,19 +159,21 @@
 			<h1 class="white">Kapcsolat</h1>
 			<div id="contactsContent" class="center_flex">
 				<div id="contactsSend">
-					<p class="bold sanddune center">Időpont foglalás</p>
-					<p class="sanddune must_fill pTopMargin">Név</p>
-					<input type="text" id="contactInputName" required></input>
-					<p class="sanddune must_fill pTopMargin">Telefonszám</p>
-					<input type="tel" id="contactInputPhoneNumber" required></input>
-					<p class="sanddune must_fill pTopMargin">E-mail cím</p>
-					<input type="email" id="contactInputEmail" required></input>
-					<p class="sanddune must_fill pTopMargin">Nap</p>
-					<select id="contactInputDay" required></select>
-					<p class="sanddune must_fill pTopMargin">Óra</p>
-					<select id="contactInputHour" required></select>
-					<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
-					<button class="btn btn-primary">Ütemezze be magát</button>
+					<form onsubmit="sendComment(event);">
+						<p class="bold sanddune center">Időpont foglalás</p>
+						<p class="sanddune must_fill pTopMargin">Név</p>
+						<input type="text" id="contactInputName" required></input>
+						<p class="sanddune must_fill pTopMargin">Telefonszám</p>
+						<input type="tel" id="contactInputPhoneNumber" required></input>
+						<p class="sanddune must_fill pTopMargin">E-mail cím</p>
+						<input type="email" id="contactInputEmail" required></input>
+						<p class="sanddune must_fill pTopMargin">Nap</p>
+						<select id="contactInputDay" required></select>
+						<p class="sanddune must_fill pTopMargin">Óra</p>
+						<select id="contactInputHour" required></select>
+						<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
+						<input class="btn btn-primary" type="submit" value="Ütemezze be magát">
+					</form>
 				</div>
 				<div id="contactLocations">
 					<p class="bold sanddune center">Kalóz János György - Pszichológus</p>
@@ -192,34 +196,30 @@
 		<div id="footerContainer">
 			Kalóz János György - Pszichológus © 2022 - All rights reserved | <a href="https://www.privacypolicies.com/blog/privacy-policy-template/">Privacy Policy</a>
 		</div>
-			
-		<!--
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-			Launch test modal
-		</button>
 
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="mainModal" tabindex="-1" aria-labelledby="mainModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<div class="modal-header alert-warning">
-						<h5 class="modal-title" id="exampleModalLabel">Pandora's Box</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-header alert-success">
+						<h5 class="modal-title" id="mainModalLabel">Sikeres!</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 					</div>
 					<div class="modal-body">
-					   Boooo!
+					   
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ignore warning</button>
-						<button type="button" class="btn btn-primary">Get me out of here!</button>
+						<button type="button" class="btn btn-success" data-bs-dismiss="modal" id="okBtn">Ok!</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		-->
+
+
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/carousel.js"></script>
 		<script src="js/services.js"></script>
 		<script src="js/contacts.js"></script>
+		<script src="js/comments.js"></script>
 	</body>
 </html>
