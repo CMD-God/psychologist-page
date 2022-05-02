@@ -363,6 +363,10 @@ input, textarea {
 	text-align: center;
 }
 
+#commentsCarousel {
+	min-height: 15em;
+}
+
 /*
 :root {
 	--indiankhaki: #C4A48F;

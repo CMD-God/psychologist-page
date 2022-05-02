@@ -1,0 +1,70 @@
+
+body {
+    background-color: var(--pampas);
+}
+
+#mainContent {
+    margin: 3em auto;
+    width: 900px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+table {
+    margin: 0.5em;
+}
+
+td:not(.tableHeader) {
+    padding: 0.3em;
+    border: 1px solid #444444;
+}
+
+.tableHeader {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color:#444444;
+    color: #BBBBBB;
+}
+
+#topMenu {
+    background-color: var(--sanddune);
+    border: 2px solid black;
+}
+
+#navLine {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.navItem {
+    background-color: var(--silverchalice);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border: 2px solid black;
+    border-bottom: none;
+    font-size: 1.1em;
+    margin-right: 0.1em;
+    padding: 0.5em;
+    color: var(--pampas);
+    user-select: none;
+    cursor: pointer;
+}
+
+.navItem.selected {
+    background-color: var(--sanddune);
+}
+
+.page {
+    display: none;
+
+}
+
+.page.activePage {
+    display: block;
+}
+
+#noComments,#noAppointments {
+    display: none;
+}

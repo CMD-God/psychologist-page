@@ -127,15 +127,16 @@
 				<div id="feedbackComments">
 					<object type="image/svg+xml" data="img/quotes_arrows.svg" class="feedbackQuotes"></object>
 					<div id="feedbackDisplay">
-						<div class="comment">
-							<div class="commentBody">"Számomra a rendelője egy olyan hely, ahova mikor belépek azt érzem, hogy biztonságban vagyok, önmagam lehetek. Mindig nyíltan beszélhetek a problémáimról, az érzéseimről, barmiről ami éppen bennem van, és közben egy olyan ember ül velem szemben, akit érdekel a mondanóm, aki figyel rám, nem ítélkezik, és őja. Ha egy tapasztalt ember tanácsára van szükségem, akkor mindig hozzá fordulok."</div>
-							<div class="commentAuthor">Bárdos Imola</div>
+						<div id="commentsCarousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<!-- Here come the good stuff through JS! -->
+							</div>
 						</div>
 					</div>
 					<hr class="customDivider"></hr>
 					<div class="center_flex">
-						<div class="commentArrow center_flex"><div class="arrow left"></div></div>
-						<div class="commentArrow center_flex"><div class="arrow right"></div></div>
+						<div class="commentArrow center_flex" onclick="moveCarousel(false)"><div class="arrow left"></div></div>
+						<div class="commentArrow center_flex" onclick="moveCarousel(true)"><div class="arrow right"></div></div>
 					</div>
 				</div>
 				<div id="feedbackSender">
@@ -159,18 +160,18 @@
 			<h1 class="white">Kapcsolat</h1>
 			<div id="contactsContent" class="center_flex">
 				<div id="contactsSend">
-					<form onsubmit="sendComment(event);">
+					<form onsubmit="sendFormData(event, 'php/sendAppointment.php');">
 						<p class="bold sanddune center">Időpont foglalás</p>
 						<p class="sanddune must_fill pTopMargin">Név</p>
-						<input type="text" id="contactInputName" required></input>
+						<input type="text" id="contactInputName" name="name" required></input>
 						<p class="sanddune must_fill pTopMargin">Telefonszám</p>
-						<input type="tel" id="contactInputPhoneNumber" required></input>
+						<input type="tel" id="contactInputPhoneNumber" name="phone_number" required></input>
 						<p class="sanddune must_fill pTopMargin">E-mail cím</p>
-						<input type="email" id="contactInputEmail" required></input>
+						<input type="email" id="contactInputEmail" name="email" required></input>
 						<p class="sanddune must_fill pTopMargin">Nap</p>
-						<select id="contactInputDay" required></select>
+						<select id="contactInputDay" name="day" required></select>
 						<p class="sanddune must_fill pTopMargin">Óra</p>
-						<select id="contactInputHour" required></select>
+						<select id="contactInputHour" name="hour" required></select>
 						<p class="must_fill_before">a megjelölt mezők kitöltése kötelező</p>
 						<input class="btn btn-primary" type="submit" value="Ütemezze be magát">
 					</form>
@@ -197,26 +198,10 @@
 			Kalóz János György - Pszichológus © 2022 - All rights reserved | <a href="https://www.privacypolicies.com/blog/privacy-policy-template/">Privacy Policy</a>
 		</div>
 
-		<div class="modal fade" id="mainModal" tabindex="-1" aria-labelledby="mainModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header alert-success">
-						<h5 class="modal-title" id="mainModalLabel">Sikeres!</h5>
-						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-					</div>
-					<div class="modal-body">
-					   
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-success" data-bs-dismiss="modal" id="okBtn">Ok!</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/modal_manager.js"></script>
 		<script src="js/carousel.js"></script>
 		<script src="js/services.js"></script>
 		<script src="js/contacts.js"></script>

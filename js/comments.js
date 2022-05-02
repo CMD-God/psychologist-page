@@ -2,7 +2,8 @@
 var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 var feedbackStrings = {
-    ["php/sendComment.php"] : "A megjegyzés sikeresen el lett küldve!"
+    ["php/sendComment.php"] : "A megjegyzés sikeresen el lett küldve!",
+    ["php/sendAppointment.php"] : "Az időpont kérelmezése rögzítve!"
 }
 
 var errorMessages = {
@@ -26,21 +27,38 @@ function sendFormData(event, address) {
     })
 }
 
-function displayMainModal(bodyText, className = "success", headerText = "Sikeres!") {
-    $('#mainModal .modal-body').html(bodyText);
-    $('#mainModal .modal-title').html(headerText);
-    document.querySelector("#mainModal .modal-header").className = "modal-header alert-" + className;
-    $('#mainModal .btn').prop("className", "btn btn-" + className);
-    $('#mainModal').modal({
-        show: true,
-        backdrop: true,
-        keyboard: true,
-        focus: true
+var commentsCarousel;
+
+function setupCarousel() {
+    var inner = $("#commentsCarousel .carousel-inner");
+    $.getJSON("php/getCommentsSite.php", {}, function(data) {
+        console.log("DATA", data);
+        for (var i=0; i < data.length; i++) {
+            var row = data[i];
+            inner.append(`
+                <div class="carousel-item">
+                    <div class="comment">
+                        <div class="commentBody">"${row.body.replaceAll("\n", "<br>")}"</div>
+                        <div class="commentAuthor">${row.name}</div>
+                    </div>
+                </div>
+            `);
+        }
+
+        $("#commentsCarousel .carousel-inner .carousel-item:first-child").addClass("active");
+        
+        commentsCarousel = $('#commentsCarousel').carousel({ // The return value is simply the carousel element. You will have to call the carousel method on this every single time still.
+            interval: false,
+            keyboard: false,
+            pause: false,
+            ride: false,
+            wrap: true
+        });
     });
 }
 
-$('#mainModal #okBtn').click(
-    function() {
-        $('#mainModal').modal("hide");
-    }
-);
+function moveCarousel(is_next = true) {
+    commentsCarousel.carousel(is_next ? "next" : "prev");
+}
+
+setupCarousel();
