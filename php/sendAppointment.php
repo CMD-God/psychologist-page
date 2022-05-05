@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $day = test_input($_POST["day"]);
     $hour = test_input($_POST["hour"]);
 
-    if (strlen($name) > 0 && strlen($phone_number) > 0 && filter_var($email, FILTER_VALIDATE_EMAIL) > 0 && is_numeric($day) && is_numeric($hour)) {
+    if (strlen($name) > 0 && strlen($phone_number) > 0 && filter_var($email, FILTER_VALIDATE_EMAIL) && is_numeric($day) && is_numeric($hour)) {
         $query = "INSERT INTO appointments (name, phone_number, email, day, hour) VALUES ('$name', '$phone_number', '$email', '$day', '$hour')";
         mysqli_query($db, $query);
         if (mysqli_error()) {

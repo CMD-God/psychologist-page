@@ -1,12 +1,10 @@
 
 <?php
-
 require_once "php/config.php";
 
 if (!$is_logged_in) {
     force_login();
 }
-
 ?>
 
 <html>

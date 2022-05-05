@@ -62,3 +62,4 @@ function deleteComment(id) {
 }
 
 refreshComments();
+

@@ -12,3 +12,4 @@ $(".navItem").each(function(i, e) {
     const elem = e;
     e.onclick = function() {changePage(elem);};
 });
+

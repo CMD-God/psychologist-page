@@ -21,7 +21,7 @@ function sendFormData(event, address) {
             displayMainModal(feedbackStrings[address]);
             event.srcElement.reset();
         } else {
-            displayMainModal(errorMessages[data], "danger", "Hiba!");
+            displayMainModal(errorMessages[data.trim()] || "Egy hiba történt. Kérem próbálja meg később!", "danger", "Hiba!");
         }
         console.log(data);
     })

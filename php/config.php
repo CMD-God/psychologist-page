@@ -18,7 +18,7 @@ function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-    # $data = mysqli_real_escape_string($data);
+    # $data = mysqli_real_escape_string($data); # Will break everything for some reason. Will need to check after presentation.
     return $data;
 }
 

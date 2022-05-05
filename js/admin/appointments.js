@@ -22,7 +22,7 @@ function refreshAppointments() {
                         <td>${row.name}</td>
                         <td>${row.phone_number}</td>
                         <td>${row.email}</td>
-                        <td>${days[row.day]}</td>
+                        <td>${days[Number(row.day)-1]}</td>
                         <td>${row.hour < 10 ? "0" : ""}${row.hour}:00</td>
                         <td>
                             <button class="btn btn-danger" onclick="askAppointmentDelete(${row.id})"><i class="bi bi-trash"></i></button>
